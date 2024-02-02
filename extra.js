@@ -89,11 +89,10 @@ function arraySplit (array, z) {
 
 /*9- Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console
 una “piramide” creata con il carattere “#” e avente X strati.*/
-function extraNine(x) {
-    let char = "#";
-    console.log(char);
-    for (let i = 0; i < x-1; i++) {
-            char += "##";
-        console.log(char);
+function hashtagPiramyd(z) {
+    let hash = "#";
+    for (let i = 1; i < z; i++) {
+            hash += "##"; // incrementa sempre di due!
+        console.log(hash);
     }
 }
