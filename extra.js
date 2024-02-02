@@ -87,18 +87,13 @@ function arraySplit (array, z) {
     return subArray
 }
 
-console.log(arraySplit ([1, 2, 3, 4], 2))
-
-
 /*9- Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console
 una “piramide” creata con il carattere “#” e avente X strati.*/
-function hashtagPiramid (v) {
-    for (let i = 1; i <= v; i++) {
-        let repeat = i; 
-        if (i % 2 === 0) {
-            repeat++;
-        }
-        console.log("#".repeat(repeat,v));
+function extraNine(x) {
+    let char = "#";
+    console.log(char);
+    for (let i = 0; i < x-1; i++) {
+            char += "##";
+        console.log(char);
     }
-    return "";
 }
