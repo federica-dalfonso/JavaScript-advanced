@@ -79,16 +79,26 @@ function reverse (string) {
 function arraySplit (array, z) {
     let subArray = []; 
     for (el of array) {
-        subArray.push(array.slice(el, el + z))
+        let arrB = array.splice(el[0], z);
+        if (arrB.length > 0) {
+            subArray.push(arrB);
+        }
     } 
     return subArray
 }
+
+console.log(arraySplit ([1, 2, 3, 4], 2))
+
 
 /*9- Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console
 una “piramide” creata con il carattere “#” e avente X strati.*/
 function hashtagPiramid (v) {
     for (let i = 1; i <= v; i++) {
-        console.log("#".repeat(i,v));
+        let repeat = i; 
+        if (i % 2 === 0) {
+            repeat++;
+        }
+        console.log("#".repeat(repeat,v));
     }
     return "";
 }

@@ -21,7 +21,7 @@ function modifyString (string, [index]) {
 /*3- Funzione che controlli se due numeri sono compresi tra 40 e 60 o tra 70 e 100. Ritorna "true" se rispecchiano
 queste condizioni, altrimenti "false"*/
 function includedNumber (a, b){
-    if (((40 < a && a < 60) || (40 < b && b < 60)) || ((70 < a && a < 100) || (70 < b && b < 100))) {
+    if (((40 < a && a < 60) || (70 < a && a < 100)) && ((40 < b && b < 60) || (70 < b && b < 100))) {
         return true;
     } else {
         return false;
@@ -73,7 +73,7 @@ function cornerType (deg) {
 
 /*8- Funzione che crei acronimo a partire da una frase. Es. "Fabbrica Italiana Automobili Torino" deve ritornare FIAT */
 function acronym (string) {
-    if (typeof string) {
+    if (typeof string === "string") {
         let words = string.split(" ");
         let firstLetter = [];
         for (el of words) {
